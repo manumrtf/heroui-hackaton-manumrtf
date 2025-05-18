@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom edge gradients for smooth transitions */
+@layer components {
+  
+
+   .edge-fade-left {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 15%;
+    z-index: 10;
+    pointer-events: none;
+   }
+
+   .edge-fade-right {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 15%;
+    z-index: 10;
+    pointer-events: none;
+   }
+
+    .dark .edge-fade-left {
+   
+      background: linear-gradient(to right, #000, transparent);
+    }
+    
+    .dark .edge-fade-right {
+
+      background: linear-gradient(to left, #000, transparent);
+    }
+      
+    .light .edge-fade-left {
+      background: linear-gradient(to right, #fff, transparent);
+    }
+
+    .light .edge-fade-right {
+      background: linear-gradient(to left, #fff, transparent);
+    }
+ 
+  }
